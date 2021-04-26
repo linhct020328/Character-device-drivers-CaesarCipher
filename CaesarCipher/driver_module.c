@@ -99,7 +99,7 @@ ssize_t my_write(struct file *filp, const char __user *user_buf, size_t len, lof
 	{
 		kernel_buffer++;
 		key = *kernel_buffer;
-		key = key - 22;
+		key = key - 48; // -22 - 26
 		MaHoa(XauRo,XauMa,key);
 	}
 	if(choice == 3)//decrypt
@@ -136,7 +136,6 @@ void MaHoa(char XauRo[MEM_SIZE],char XauMa[MEM_SIZE], int key)
 }
 void GiaiMa(char XauMa[MEM_SIZE],char XauGiaiMa[MEM_SIZE], int key)
 {
-	key = key - 26;
 	len = strlen(XauMa);// do dai xau
 	for(i = 0; i < len; i++)
 	{
