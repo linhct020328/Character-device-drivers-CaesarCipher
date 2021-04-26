@@ -136,6 +136,7 @@ void MaHoa(char XauRo[MEM_SIZE],char XauMa[MEM_SIZE], int key)
 }
 void GiaiMa(char XauMa[MEM_SIZE],char XauGiaiMa[MEM_SIZE], int key)
 {
+	key = key - 26;
 	len = strlen(XauMa);// do dai xau
 	for(i = 0; i < len; i++)
 	{
