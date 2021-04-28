@@ -99,14 +99,14 @@ ssize_t my_write(struct file *filp, const char __user *user_buf, size_t len, lof
 	{
 		kernel_buffer++;
 		key = *kernel_buffer;
-		key = key - 48; // -22 - 26
+		key = key - 22; 
 		MaHoa(XauRo,XauMa,key);
 	}
 	if(choice == 3)//decrypt
 	{
 		kernel_buffer++;
 		key = *kernel_buffer;
-		key = key - 22;
+		key = key - 48;// -22 - 26
 		GiaiMa(XauMa,XauGiaiMa,key);
 	}
 	return len;
